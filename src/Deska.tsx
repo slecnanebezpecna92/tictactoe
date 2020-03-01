@@ -37,14 +37,25 @@ const useClasses = makeStyles({
     backgroundColor: "#c6ffb8"
   },
   radek: {
-    backgroundColor: "#c6ffb8"
+    // backgroundColor: "#c6ffb8",
+    // opacity: 0.5,
   },
   deska: {
     position: "relative",
+    width: 180,
     backgroundColor: "#5FF33B",
     // marginLeft: "auto",
     // marginRight: "auto",
+  },
+  vyhralKrizek: {
+    position: "relative",
     width: 180,
+    backgroundColor: "#E15454",
+  },
+  vyhraloKolecko: {
+    position: "relative",
+    width: 180,
+    backgroundColor: "#0FF3FB",
   },
 });
 
@@ -86,7 +97,7 @@ export const Deska = observer(function(props: { store: DeskaStore }) {
   const { store } = props;
   const classes = useClasses();
   return (
-    <div className={classes.deska}>
+    <div className={store.vitez>0 ? classes.vyhralKrizek : store.vitez<0 ? classes.vyhraloKolecko : classes.deska}>
       {nulaJednaDva.map((y: number) => (
         <Radek key={y} y={y} store={store} />
       ))}
