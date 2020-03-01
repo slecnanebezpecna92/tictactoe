@@ -21,7 +21,7 @@ const App = observer(function(props: {}) {
       <h1>TicTacToe</h1>
       <Deska store={store} />
       <div>Táhne : {store.tahneKrizek ? "x" : "o"}</div>
-      <div>Vítěz : {store.vitez}</div>
+        <div>Vítěz : {store.vitez <0 ? "Kolecko" : store.vitez >0 ? "Krizek" : "Zadny"}</div>
       <button className={classes.tlacitko} onClick={store.restartovat}>
         Nová hra
       </button>
