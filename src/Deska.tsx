@@ -97,7 +97,7 @@ export const Deska = observer(function(props: { store: DeskaStore }) {
   const { store } = props;
   const classes = useClasses();
   return (
-    <div className={store.vitez>0 ? classes.vyhralKrizek : store.vitez<0 ? classes.vyhraloKolecko : classes.deska}>
+    <div className={store.vitez>0 ? classes.vyhralKrizek : (store.vitez<0 ? classes.vyhraloKolecko : classes.deska)}>
       {nulaJednaDva.map((y: number) => (
         <Radek key={y} y={y} store={store} />
       ))}
