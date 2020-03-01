@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useClasses = makeStyles(theme => ({
   tlacitko: {
-    color: "yellow"
+    backgroundColor: "yellow"
   }
 }));
 

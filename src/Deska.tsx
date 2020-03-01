@@ -42,7 +42,7 @@ const useClasses = makeStyles({
   deska: {
     position: "relative",
     backgroundColor: "#5FF33B",
-    marginRight: "597px"
+    marginRight: "500px"
   },
   svisly: {
 
