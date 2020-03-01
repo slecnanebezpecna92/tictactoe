@@ -42,10 +42,9 @@ const useClasses = makeStyles({
   deska: {
     position: "relative",
     backgroundColor: "#5FF33B",
-    marginRight: "500px"
-  },
-  svisly: {
-
+    // marginLeft: "auto",
+    // marginRight: "auto",
+    width: 180,
   },
 });
 
@@ -91,7 +90,6 @@ export const Deska = observer(function(props: { store: DeskaStore }) {
       {nulaJednaDva.map((y: number) => (
         <Radek key={y} y={y} store={store} />
       ))}
-      <div className={classes.svisly} />
     </div>
   );
 });
